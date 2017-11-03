@@ -1,23 +1,26 @@
 <!DOCTYPE html>
 <html ng-app="myShoppingList">
 <head>
-	<title>anusha magic</title>
-	<meta charset="utf-8">
+  <title>anusha magic</title>
+  <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
-   <link rel="stylesheet" href="style.css">
+   <!-- <link rel="stylesheet" href="style.css"> -->
 </head>
 <body>
 <div ng-controller="myCtrl">
 <p>Input some name in the input box:</p>
 <p>Name : <input type="text" ng-model="name" placeholder="Enter name here"></p>
 <p>Hello <span ng-bind="name"></span></p>
+<p><button ng-click="add()">Add</button></p>
   <ul>
     <li ng-repeat="names in teammates">{{names}}</li>
   </ul>
-  <p>The time is:</p>
-
-<h1>{{theTime}}</h1>
+<h1>The time is:  {{theTime}}</h1>
+<div>
+  <button ng-click="get()">Get</button>
+      <p>The ID is {{greeting.id}}</p>
+      <p>The content is {{greeting.content}}</p></div>  
 </div>
 
 <script src="bower_components/angular/angular.min.js"></script>
